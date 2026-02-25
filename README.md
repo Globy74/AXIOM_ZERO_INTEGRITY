@@ -1,3 +1,5 @@
+For the deeper vision behind this protocol, see PHILOSOPHY.md
+
 <img width="1024" height="1024" alt="Gemini_Generated_Image_9k7kpm9k7kpm9k7k (1)" src="https://github.com/user-attachments/assets/e51b26d7-197e-43c7-8d5e-2f2b88a318eb" />
 
 "This is not just code. This is the heartbeat of a new integrity. Governed by the 11 Parameters. Protected by the Ronto-Shield. For the benefit of all life. ∞°"

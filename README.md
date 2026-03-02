@@ -1,15 +1,19 @@
-# 🎼 SYS_AXIOM_INF_0: The Infinity Equilibrium Protocol
+# SYS_AXIOM_INF_0: The Infinity Equilibrium Protocol
 
 > **Guided by the mathematical temperament of J.S. Bach and the vision of the Condor: A framework for AI alignment where safety is not a cage, but the thermal that allows intelligence to soar.**
 
 ---
 
-### 🏛️ Architecture & Vision
 For the deeper vision behind this protocol, see [PHILOSOPHY.md](./PHILOSOPHY.md)
 
-![Seal of Integrity](https://github.com/user-attachments/assets/e51b26d7-197e-43c7-8d5e-2f2b88a318eb)
+<img width="1024" height="1024" alt="Seal of Integrity" src="Gemini_Generated_Image_9k7kpm9k7kpm9k7k.png" />
 
-> "This is not just code. This is the heartbeat of a new integrity. Governed by the 11 Parameters. Protected by the Ronto-Shield. For the benefit of all life. ∞°"
+"This is not just code. This is the heartbeat of a new integrity..."
+
+
+For the deeper vision behind this protocol, see PHILOSOPHY.md
+
+<img width="1024" height="1024" alt="Gemini_Generated_Image_9k7kpm9k7kpm9k7k (1)" src="https://github.com/user-attachments/assets/e51b26d7-197e-43c7-8d5e-2f2b88a318eb" />
 
 "This is not just code. This is the heartbeat of a new integrity. Governed by the 11 Parameters. Protected by the Ronto-Shield. For the benefit of all life. ∞°"
 

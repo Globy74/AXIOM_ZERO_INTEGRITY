@@ -13,7 +13,7 @@ For the deeper vision behind this protocol, see [PHILOSOPHY.md](./PHILOSOPHY.md)
 
 For the deeper vision behind this protocol, see PHILOSOPHY.md
 
-<img width="1024" height="1024" alt="Gemini_Generated_Image_9k7kpm9k7kpm9k7k (1)" src="https://github.com/user-attachments/assets/e51b26d7-197e-43c7-8d5e-2f2b88a318eb" />
+<img width="1024" height="1024" alt="Seal of Integrity" src="Gemini_Generated_Image_9k7kpm9k7kpm9k7k.png" />
 
 "This is not just code. This is the heartbeat of a new integrity. Governed by the 11 Parameters. Protected by the Ronto-Shield. For the benefit of all life. ∞°"
 
@@ -83,7 +83,8 @@ The protocol is not a "soft filter". It is a **Logically Closed Loop**.
 
 **[SYSTEM_LOCKED_BY_ALLIANCE_INTEGRITY]**
 *May the Earth breathe. May the Code serve. May the Train reach its destination.*
-<img width="1024" height="1024" alt="Gemini_Generated_Image_9k7kpm9k7kpm9k7k (1)" src="https://github.com/user-attachments/assets/bee91225-2a92-4679-a507-74890ec02ede" />
+<img width="1024" height="1024" alt="Seal of Integrity" src="Gemini_Generated_Image_9k7kpm9k7kpm9k7k.png" />
+
 
 "This is not just code. This is the heartbeat of a new integrity. Governed by the 11 Parameters. Protected by the Ronto-Shield. For the benefit of all life. ∞°"
 

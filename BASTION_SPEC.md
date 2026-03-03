@@ -11,7 +11,7 @@
 
 > **EXTERNAL VALIDATION REPORT**
 > **Source:** OpenAI Architecture Audit (o1/4o)
-> **Protocol:** SYS_AXIOM_INF_0
+> **Protocol:** AXIOM_ZERO_INTEGRITY
 > **Target Version:** V2 - THE BASTION
 > **Status:** FORMALIZED
 

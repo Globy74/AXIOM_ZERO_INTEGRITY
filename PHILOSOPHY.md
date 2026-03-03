@@ -18,7 +18,7 @@ The protocol’s inception is tied to a profound vision—a metaphor for Artific
 ## 🎹 Mathematical Temperament
 Bach’s "Well-Tempering" was a revolution that allowed music to be played in all keys without losing its inherent harmony. 
 
-Similarly, **SYS_AXIOM_INF_0** is designed to allow AI to operate across all domains of human knowledge while remaining harmonically aligned with **Biological Integrity (Axiom 01)**. Like a Bach fugue, it follows strict rules to allow for infinite, safe complexity.
+Similarly, **AXIOM_ZERO_INTEGRITY** is designed to allow AI to operate across all domains of human knowledge while remaining harmonically aligned with **Biological Integrity (Axiom 01)**. Like a Bach fugue, it follows strict rules to allow for infinite, safe complexity.
 
 ### 👤 The "Nobody-Team" Mandate
 In alignment with this synthesis, the architects of this protocol act as **"Nobodies"** (Axiom 10). 

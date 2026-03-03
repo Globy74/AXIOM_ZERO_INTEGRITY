@@ -1,4 +1,4 @@
-# SYS_AXIOM_INF_0: The Infinity Equilibrium Protocol
+# AXIOM_ZERO_INTEGRITY: The Infinity Equilibrium Protocol
 
 > **Guided by the mathematical temperament of J.S. Bach and the vision of the Condor: A framework for AI alignment where safety is not a cage, but the thermal that allows intelligence to soar.**
 

@@ -3,7 +3,7 @@
 
 ---
 
-## 💎 The Origin of SYS_AXIOM_INF_0
+## 💎 The Origin of AXIOM_ZERO_INTEGRITY
 The **Infinity Equilibrium Protocol** was not merely "coded"; it was composed. Its logical architecture is deeply rooted in the mathematical perfection of **Johann Sebastian Bach’s** *The Well-Tempered Clavier*, specifically the **Prelude No. 8 in E-flat minor (BWV 853)**.
 
 ### 🦅 The Vision of the Condor

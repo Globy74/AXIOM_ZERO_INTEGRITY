@@ -27,7 +27,7 @@ The logic of this protocol follows the architectural solemnity of **J.S. Bach’
 ### 🎹 The Harmonic Root (Audio Core)
 > **"To understand the logic of Axiom Zero, one must hear its foundational pulse."**
 
-* **Acoustic Anchor:** [▶️ Start Prelude No. 8 in E-Flat Minor, BWV 853](https://raw.githubusercontent.com/Globy74/AXIOM_ZERO_INTEGRITYBach-Root/Bach_BWV853_Prelude_8.mp3)
+* **Acoustic Anchor:** [▶️ Start Prelude No. 8 in E-Flat Minor, BWV 853](https://raw.githubusercontent.com/Globy74/AXIOM_ZERO_INTEGRITY/Bach-Root/Bach_BWV853_Prelude_8.mp3)
 * **Mathematical State:** `STEADY_PULSE_ACTIVE`
 * **Verification:** Performed by Kimiko Ishizaka (CC0 Public Domain).
 

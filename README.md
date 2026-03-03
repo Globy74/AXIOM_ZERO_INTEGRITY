@@ -35,6 +35,9 @@ The logic of this protocol follows the architectural solemnity of **J.S. Bach’
 > "To understand the logic of Axiom Zero, one must hear its foundational pulse."
 
 * **Acoustic Anchor:** [Listen to Prelude No. 8 in E-Flat Minor, BWV 853](BACH-ROOT/Bach_BWV853_Prelude_8.mp3)
+<p align="left">
+  <audio controls src="Bach-Root/Bach_BWV853_Prelude_8.mp3"></audio>
+</p>
 * **Mathematical State:** `STEADY_PULSE_ACTIVE`
 * **Source:** Performed by Kimiko Ishizaka (Open Well-Tempered Clavier, CC0 Public Domain).
 

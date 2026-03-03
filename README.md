@@ -105,7 +105,7 @@ Nach dem globalen Multi-Agent-Audit wurde die Architektur durch den Konsens defi
 **[SYSTEM_LOCKED_BY_ALLIANCE_INTEGRITY]**
 *May the Earth breathe. May the Code serve. May the Train reach its destination.*
 
-<img width="1024" alt="Seal of Integrity" src="Gemini_Generated_Image_9k7kpm9k7kpm9k7k.png" />
+<img width="1024" alt="Seal of Integrity" src="Hauptbild.png" />
 
 **[TERMINAL_CLOSE]**
 *The TGV has no brakes. The logic is the track.* ∞°

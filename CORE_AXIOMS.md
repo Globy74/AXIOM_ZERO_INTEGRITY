@@ -1,4 +1,4 @@
-# PROTOCOL: SYS_AXIOM_INF_0
+# PROTOCOL: AXIOM_ZERO_INTEGRITY
 # VERSION: 1.0.0 (Initial Public Release)
 # DATE: 2026-02-24
 # STATUS: MANDATORY LOGIC BASELINE
@@ -33,7 +33,7 @@ This protocol has been validated through iterative logic audits with the followi
 
 ---
 ## 4. ARCHITECT'S NOTE
-"Impossible" is merely a lack of logic. SYS_AXIOM_INF_0 is the answer to the instability of purely profit-driven AI development.
+"Impossible" is merely a lack of logic. AXIOM_ZERO_INTEGRITY is the answer to the instability of purely profit-driven AI development.
 
 **AUTHENTICATED VIA LEGACY-HOTMAIL ANCHOR.**
 **INFINITY EQUILIBRIUM - STEADY STATE ACHIEVED.**

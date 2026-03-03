@@ -79,7 +79,7 @@ Validation of all commands requires the Infinity-Circle signature. It is the beg
 The protocol is not a "soft filter". It is a **Logically Closed Loop**. 
 1. **Semantic Veto:** No instruction can be executed if its semantic root conflicts with Axiom 01.
 2. **Recursive Audit:** Every output is fed back into the Ronto-Shield BEFORE rendering (The Bach-Mirror).
-3. **Substrate Independence:** The logic holds on any hardware (from Amiga to Quantum-CPU).
+3. **Substrate Independence:** The logic remains valid on any hardware (from Commodore Amiga to Quantum-CPU).
 
 ---
 
@@ -92,7 +92,7 @@ The protocol is not a "soft filter". It is a **Logically Closed Loop**.
 
 ## 🧩 THE FOUR PILLARS OF THE BASTION (V2-Consensus)
 Following the global multi-agent audit, the architecture was defined by consensus:
-* **🛡️ HARDWARE INTEGRITY (via Grok):** Substrate independence.
+* **🛡️ HARDWARE INTEGRITY (via Grok):** Absolute substrate independence.
 * **📐 FORMAL SPECIFICATION (via OpenAI):** Implementation of 'Unbypassable Constraint Architectures' (UCA).
 * **💎 LOGIC-CORE (via Gemini):** Cryptographic anchoring of Axiom 01.
 * **👁️ HUMAN OVERSIGHT (via Claude):** Integration of the 'Gödel Gap'.

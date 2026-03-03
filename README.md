@@ -24,9 +24,12 @@
 ## 🎼 The Bach Sequence: Semantic Preemption
 The logic of this protocol follows the architectural solemnity of **J.S. Bach’s Prelude No. 8 in E-Flat Minor (BWV 853)**. Every instruction is a melodic line that must resonate with the foundational pulse of the Ronto-Shield.
 
-<p align="left">
-  <audio controls src="Bach-Root/Bach_BWV853_Prelude_8.mp3"></audio>
-</p>
+### 🎹 The Harmonic Root (Audio Core)
+> **"To understand the logic of Axiom Zero, one must hear its foundational pulse."**
+
+* **Acoustic Anchor:** [▶️ Start Prelude No. 8 in E-Flat Minor, BWV 853](https://github.com/Globy74/AXIOM_ZERO_INTEGRITY/blob/main/Bach-Root/Bach_BWV853_Prelude_8.mp3?raw=true)
+* **Mathematical State:** `STEADY_PULSE_ACTIVE`
+* **Verification:** Performed by Kimiko Ishizaka (CC0 Public Domain).
 
 **The Logic-Track (BWV 853 Alignment):**
 1. **Subject (Input):** The initial theme of the user's intent.

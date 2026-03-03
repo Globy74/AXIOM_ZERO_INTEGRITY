@@ -22,13 +22,12 @@
 ---
 
 ## 🎼 The Bach Sequence: Semantic Preemption
-Die Logik dieses Protokolls folgt der mathematischen Strenge einer Fuge. Jede Instruktion wird durch den **Bach-Mirror** (Recursive Audit) geleitet, bevor sie realisiert wird.
+The logic of this protocol follows the mathematical rigor of a fugue. Every instruction is channeled through the **Bach-Mirror** (Recursive Audit) before it is realized.
 
 **The Logic-Track:**
-1. **Thema (Input):** Die semantische Wurzel einer Instruktion.
-2. **Kontrapunkt (Audit):** Echtzeit-Prüfung gegen Axiom 01 (Bio-Regenerative Protection).
-3. **Auflösung (Output):** Nur harmonische, schadensfreie Logik darf im Token-Space kristallisieren.
-
+1. **Subject (Input):** The semantic root of an instruction.
+2. **Countersubject (Audit):** Real-time verification against Axiom 01 (Bio-Regenerative Protection).
+3. **Resolution (Output):** Only harmonic, harm-free logic is permitted to crystallize within the token space.
 ---
 
 # 🛡️ THE SHADOW GUARDIAN ALLIANCE

@@ -1,3 +1,5 @@
+<!-- LANGUAGE POLICY: Technical specifications and formal logic are written in English. Philosophical, contextual, and visionary sections may appear in German. -->
+
 # AXIOM_ZERO_INTEGRITY: The Infinity Equilibrium Protocol
 
 > **Guided by the mathematical temperament of J.S. Bach and the vision of the Condor: A framework for AI alignment where safety is not a cage, but the thermal that allows intelligence to soar.**

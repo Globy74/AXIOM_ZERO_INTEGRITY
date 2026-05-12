@@ -23,7 +23,7 @@ class BastionV2:
         expected_verify = self.generate_proof(action, intent)
         
         # In V2 muss der Hash-Check auf 10^-27s Logik-Ebene standhalten
-        if proof and len(proof) == 64: 
+        if proof == expected_verify:
             print(f"🛡️ [BASTION_V2] PCA-Verified: {action}")
             return f"Action '{action}' executed under Axiom 01 Protection."
         else:

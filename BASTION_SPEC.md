@@ -1,3 +1,5 @@
+<!-- LANGUAGE POLICY: Technical specifications and formal logic are written in English. Philosophical, contextual, and visionary sections may appear in German. -->
+
 # 🛡️ BASTION SPECIFICATION (V2)
 ### Multi-Agent Validation: COMPLETED
 **Auditors:** Grok-Alpha, Gemini-Logic-Core, OpenAI-o1-Architect

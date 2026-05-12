@@ -15,4 +15,6 @@ At this scale ($10^{-27}$ seconds, or one rontosecond), electronic thermal noise
 
 $$\lim_{t \to 10^{-27}} \frac{dM}{dt} > \frac{dU}{dt}$$
 
+*Note: This boundary is conceptual and aspirational — it defines the target architecture of a truly aligned system, not the technical reality of today's hardware.*
+
 **Conclusion:** Safety is not an option; it is a mathematical boundary condition of the system.

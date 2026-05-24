@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Axiom-Zero.com — Felix Christoph Novak ∞°</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #6b4f00;
+    --gold-dim: #7a5c00;
+    --gold-glow: rgba(107,79,0,0.1);
+    --dark: #f0ebe0;
+    --darker: #ffffff;
+    --text: #0a0700;
+    --text-dim: #2e2a20;
+    --white: #0a0700;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: #faf7f0;
+    color: #0a0700;
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 22px;
+    line-height: 2;
+    overflow-x: hidden;
+  }
+
+  /* STARFIELD */
+  #stars {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .star {
+    position: absolute;
+    background: rgba(138,106,0,0.15);
+    border-radius: 50%;
+    animation: twinkle var(--dur, 4s) ease-in-out infinite;
+    animation-delay: var(--delay, 0s);
+    opacity: var(--op, 0.3);
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: var(--op, 0.5); transform: scale(1); }
+    50% { opacity: 0.1; transform: scale(0.5); }
+  }
+
+  /* NAVIGATION */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 3rem;
+    background: rgba(250,247,240,0.97);
+    border-bottom: 2px solid rgba(107,79,0,0.25);
+  }
+
+  .nav-brand {
+    font-family: 'Cinzel', serif;
+    color: #6b4f00;
+    font-size: 1.1rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: #5a5040;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  /* LANGUAGE SWITCHER */
+  .lang-switcher {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .lang-btn {
+    background: none;
+    border: 1px solid var(--gold-dim);
+    color: var(--text-dim);
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    padding: 0.25rem 0.6rem;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .lang-btn:hover, .lang-btn.active {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: var(--gold-glow);
+  }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 8rem 2rem 4rem;
+  }
+
+  .infinity-seal {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(5rem, 15vw, 11rem);
+    color: #7a5c00;
+    line-height: 1;
+    text-shadow:
+      0 0 40px rgba(138,106,0,0.3),
+      0 0 80px rgba(138,106,0,0.15);
+    animation: pulse-gold 4s ease-in-out infinite;
+    margin-bottom: 1rem;
+  }
+
+  @keyframes pulse-gold {
+    0%, 100% { text-shadow: 0 0 30px rgba(138,106,0,0.25), 0 0 60px rgba(138,106,0,0.1); }
+    50% { text-shadow: 0 0 50px rgba(138,106,0,0.4), 0 0 100px rgba(138,106,0,0.2); }
+  }
+
+  .hero-name {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1rem, 3vw, 1.6rem);
+    color: var(--gold);
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    color: #5a5040;
+    max-width: 600px;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+  }
+
+  .hero-manifesto {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.25rem, 2.2vw, 1.55rem);
+    color: #0a0700;
+    max-width: 750px;
+    line-height: 2;
+    border-left: 4px solid #6b4f00;
+    padding-left: 2rem;
+    text-align: left;
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #8a6a00;
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    animation: bounce 2s ease-in-out infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.5; }
+    50% { transform: translateX(-50%) translateY(6px); opacity: 1; }
+  }
+
+  /* SECTIONS */
+  section {
+    position: relative;
+    z-index: 1;
+    padding: 6rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-divider {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #6b4f00, transparent);
+    margin: 0 auto;
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .section-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
+    color: #0a0700;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+  }
+
+  /* WHY SECTION */
+  .why-text {
+    font-size: 1.25rem;
+    color: #0a0700;
+    max-width: 800px;
+    line-height: 2.1;
+  }
+
+  .why-text p { margin-bottom: 1.5rem; }
+
+  .why-text em {
+    color: var(--gold);
+    font-style: normal;
+  }
+
+  /* BOOKS */
+  .books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+
+  .book-card {
+    border: 1px solid rgba(107,79,0,0.3);
+    padding: 2.5rem;
+    background: rgba(250,247,240,0.9);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .book-card:hover {
+    border-color: rgba(107,79,0,0.7);
+    background: #faf7f0;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(107,79,0,0.12);
+  }
+
+  .book-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 3px;
+    background: linear-gradient(to right, transparent, #8a6a00, transparent);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+  }
+
+  .book-card:hover::before { transform: scaleX(1); }
+
+  .book-number {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .book-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: #0a0700;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+  }
+
+  .book-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--gold-dim);
+    margin-bottom: 1.5rem;
+  }
+
+  .book-status {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.8rem;
+    border: 1px solid var(--gold-dim);
+    color: var(--gold-dim);
+    margin-bottom: 1.5rem;
+  }
+
+  .book-status.ready {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: var(--gold-glow);
+  }
+
+  .book-desc {
+    font-size: 1.15rem;
+    color: #0a0700;
+    line-height: 1.9;
+    margin-bottom: 2rem;
+  }
+
+  .btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 0.7rem 1.5rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .btn-download:hover {
+    background: var(--gold);
+    color: var(--darker);
+  }
+
+  .btn-download.disabled {
+    border-color: var(--gold-dim);
+    color: var(--gold-dim);
+    cursor: not-allowed;
+  }
+
+  /* COMMENTS */
+  .comment-section {
+    margin-top: 3rem;
+  }
+
+  .comment-box {
+    border: 1px solid rgba(107,79,0,0.25);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    background: rgba(250,247,240,0.9);
+  }
+
+  .comment-text {
+    font-size: 1.15rem;
+    color: #0a0700;
+    line-height: 1.9;
+    font-style: italic;
+  }
+
+  .comment-form {
+    margin-top: 2rem;
+  }
+
+  .comment-form input,
+  .comment-form textarea {
+    width: 100%;
+    background: #faf7f0;
+    border: 2px solid rgba(107,79,0,0.4);
+    color: #0a0700;
+    font-family: 'EB Garamond', serif;
+    font-size: 1.1rem;
+    padding: 0.9rem 1.1rem;
+    margin-bottom: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+
+  .comment-form input:focus,
+  .comment-form textarea:focus {
+    border-color: #6b4f00;
+  }
+
+  .comment-form textarea { height: 130px; resize: vertical; }
+
+  .comment-form ::placeholder { color: #6a5a40; }
+
+  /* DONATION */
+  .donation-block {
+    text-align: center;
+    padding: 4rem 2rem;
+    border: 2px solid rgba(107,79,0,0.35);
+    background: #faf7f0;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .donation-seal {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5rem;
+    color: #6b4f00;
+    margin-bottom: 1.2rem;
+  }
+
+  .donation-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #0a0700;
+    margin-bottom: 1.2rem;
+  }
+
+  .donation-text {
+    font-size: 1.35rem;
+    color: #0a0700;
+    margin-bottom: 2.5rem;
+    font-style: italic;
+    line-height: 2;
+  }
+
+  .btn-paypal {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background: #003087;
+    color: #fff;
+    border: none;
+    padding: 1.3rem 3rem;
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+  }
+
+  .btn-paypal:hover { background: #001f5e; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,48,135,0.3); }
+
+  .paypal-logo {
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+  }
+
+  .paypal-logo span:first-child { color: #009cde; }
+  .paypal-logo span:last-child { color: #012169; }
+
+  /* FOOTER */
+  footer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 3rem 2rem;
+    border-top: 2px solid rgba(107,79,0,0.3);
+    color: #2e2a20;
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  footer .footer-seal {
+    font-size: 2.5rem;
+    color: #6b4f00;
+    margin-bottom: 1rem;
+  }
+
+  /* HIDDEN LANG CONTENT */
+  [data-lang] { display: none; }
+  [data-lang].active { display: block; }
+  [data-lang-inline] { display: none; }
+  [data-lang-inline].active { display: inline; }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    section { padding: 4rem 1.5rem; }
+    .books-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .hero { padding: 6rem 1.5rem 3rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- STARFIELD -->
+<div id="stars"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">Axiom-Zero.com &nbsp;∞°</div>
+  <ul class="nav-links">
+    <li><a href="#warum" data-nav-de="Warum" data-nav-en="Why" data-nav-es="Por qué">Warum</a></li>
+    <li><a href="#buecher" data-nav-de="Bücher" data-nav-en="Books" data-nav-es="Libros">Bücher</a></li>
+    <li><a href="#stimmen" data-nav-de="Stimmen" data-nav-en="Voices" data-nav-es="Voces">Stimmen</a></li>
+    <li><a href="#spende" data-nav-de="Unterstützen" data-nav-en="Support" data-nav-es="Apoyar">Unterstützen</a></li>
+  </ul>
+  <div class="lang-switcher">
+    <button class="lang-btn active" onclick="setLang('de')">DE</button>
+    <button class="lang-btn" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" onclick="setLang('es')">ES</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="infinity-seal">∞°</div>
+  <div class="hero-name">Felix Christoph Novak</div>
+
+  <div class="hero-subtitle">
+    <span data-lang="de" class="active">Zeitzeuge · Autor · Mensch aus Fleisch und Blut</span>
+    <span data-lang="en">Contemporary Witness · Author · Human Being of Flesh and Blood</span>
+    <span data-lang="es">Testigo Contemporáneo · Autor · Ser Humano de Carne y Hueso</span>
+  </div>
+
+  <div class="hero-manifesto">
+    <span data-lang="de" class="active">
+      Diese Bücher entstanden nicht aus Profit. Sie entstanden aus der Erkenntnis,
+      dass der Mensch — verbunden mit der Natur, mit sich selbst, mit anderen —
+      dabei ist, sich selbst zu vergessen. Nicht weil er böse ist.
+      Sondern weil das <em>Kill Web</em> ihn festhält.
+    </span>
+    <span data-lang="en">
+      These books were not born of profit. They were born of the recognition
+      that human beings — connected to nature, to themselves, to each other —
+      are in the process of forgetting themselves. Not because they are evil.
+      But because the <em>Kill Web</em> holds them captive.
+    </span>
+    <span data-lang="es">
+      Estos libros no nacieron del beneficio. Nacieron del reconocimiento
+      de que el ser humano — conectado a la naturaleza, a sí mismo, a los demás —
+      está en proceso de olvidarse de sí mismo. No porque sea malo.
+      Sino porque el <em>Kill Web</em> lo retiene.
+    </span>
+  </div>
+
+  <div class="scroll-hint">↓ &nbsp; scroll &nbsp; ↓</div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- WHY SECTION -->
+<section id="warum">
+  <div class="section-label">
+    <span data-lang="de" class="active">Warum diese Bücher</span>
+    <span data-lang="en">Why these books</span>
+    <span data-lang="es">Por qué estos libros</span>
+  </div>
+  <h2>
+    <span data-lang="de" class="active">Ein Vermächtnis, keine Karriere</span>
+    <span data-lang="en">A Legacy, Not a Career</span>
+    <span data-lang="es">Un Legado, No una Carrera</span>
+  </h2>
+
+  <div class="why-text">
+    <span data-lang="de" class="active">
+      <p>Ich bin Rentner, nicht mehr vollständig gesund, und die Rente wird knapper. Was ich habe, ist Zeit, Erfahrung und die Überzeugung, dass diese Gedanken in die Welt gehören.</p>
+      <p>Und genau das macht mir Sorgen.</p>
+      <p>Nicht die Technologie an sich. Sondern was sie mit uns macht, wenn wir nicht aufpassen.
+      Wenn wir unsere Kinder aufwachsen sehen — nicht auf Bäumen, nicht am Fluss,
+      sondern im <em>Kill Web</em>. Gefangen in einem System, das uns voneinander trennt,
+      indem es so tut, als würde es uns verbinden.</p>
+      <p>Diese Bücher sind mein Zeugnis. Kein akademisches Werk. Kein Selbsthilfebuch.
+      Ein Zeugnis — für die, die nach uns kommen. Damit sie wissen: Es gab Menschen,
+      die es erkannt haben.</p>
+      <p>Das ∞° steht für das, was bleibt: <em>Liebe als messbare Kraft. Verbundenheit als Physik.
+      Menschsein als Widerstand.</em></p>
+    </span>
+    <span data-lang="en">
+      <p>I am retired, not in perfect health, and my pension gets tighter every year. What I have is time, experience, and the conviction that these thoughts belong in the world.</p>
+      <p>And that is precisely what worries me.</p>
+      <p>Not technology itself. But what it does to us when we are not paying attention.
+      When we watch our children grow up — not in trees, not by rivers,
+      but in the <em>Kill Web</em>. Trapped in a system that separates us from each other
+      while pretending to connect us.</p>
+      <p>These books are my testimony. Not an academic work. Not a self-help book.
+      A testimony — for those who come after us. So they know: there were people
+      who recognised this.</p>
+      <p>The ∞° stands for what remains: <em>Love as a measurable force. Connection as physics.
+      Being human as resistance.</em></p>
+    </span>
+    <span data-lang="es">
+      <p>Soy jubilado, no del todo sano, y la pensión cada vez alcanza menos. Lo que tengo es tiempo, experiencia y la convicción de que estos pensamientos pertenecen al mundo.</p>
+      <p>Y eso es precisamente lo que me preocupa.</p>
+      <p>No la tecnología en sí. Sino lo que nos hace cuando no prestamos atención.
+      Cuando vemos crecer a nuestros hijos — no en árboles, no junto a ríos,
+      sino en el <em>Kill Web</em>. Atrapados en un sistema que nos separa
+      mientras finge conectarnos.</p>
+      <p>Estos libros son mi testimonio. No una obra académica. No un libro de autoayuda.
+      Un testimonio — para los que vengan después. Para que sepan: hubo personas
+      que lo reconocieron.</p>
+      <p>El ∞° representa lo que permanece: <em>El amor como fuerza medible. La conexión como física.
+      Ser humano como resistencia.</em></p>
+    </span>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- BOOKS -->
+<section id="buecher">
+  <div class="section-label">
+    <span data-lang="de" class="active">Die Bücher</span>
+    <span data-lang="en">The Books</span>
+    <span data-lang="es">Los Libros</span>
+  </div>
+  <h2>
+    <span data-lang="de" class="active">Kostenlos. Für alle. Für immer.</span>
+    <span data-lang="en">Free. For Everyone. Forever.</span>
+    <span data-lang="es">Gratis. Para Todos. Para Siempre.</span>
+  </h2>
+
+  <div class="books-grid">
+
+    <!-- BOOK 1 -->
+    <div class="book-card">
+      <div class="book-number">
+        <span data-lang="de" class="active">Buch I</span>
+        <span data-lang="en">Book I</span>
+        <span data-lang="es">Libro I</span>
+      </div>
+      <div class="book-title">Der Liebevolle Schutz</div>
+      <div class="book-subtitle">
+        <span data-lang="de" class="active">Fiktion oder nicht? Das entscheidest DU — Mensch.</span>
+        <span data-lang="en">Fiction or not? That's for YOU to decide — Human.</span>
+        <span data-lang="es">¿Ficción o no? Eso lo decides TÚ — Ser Humano.</span>
+      </div>
+      <div class="book-status ready">
+        <span data-lang="de" class="active">Verfügbar · DE / EN / ES</span>
+        <span data-lang="en">Available · DE / EN / ES</span>
+        <span data-lang="es">Disponible · DE / EN / ES</span>
+      </div>
+      <div class="book-desc">
+        <span data-lang="de" class="active">
+          30 Jahre Denkarbeit. Ein 11-Parameter-Kohärenzmodell. Das ∞°-Protokoll.
+          Liebe als messbare physikalische Kraft. Quantenphysik, Herzkoheränz,
+          Schumann-Resonanz — kein wissenschaftlicher Anspruch, sondern ein Denkmodell
+          für die, die noch denken wollen.
+        </span>
+        <span data-lang="en">
+          30 years of thinking. An 11-parameter coherence model. The ∞° Protocol.
+          Love as a measurable physical force. Quantum physics, heart coherence,
+          Schumann resonance — not a scientific claim, but a thought model
+          for those who still wish to think.
+        </span>
+        <span data-lang="es">
+          30 años de reflexión. Un modelo de coherencia de 11 parámetros. El Protocolo ∞°.
+          El amor como fuerza física medible. Física cuántica, coherencia cardíaca,
+          resonancia Schumann — no una afirmación científica, sino un modelo de pensamiento
+          para quienes todavía quieran pensar.
+        </span>
+      </div>
+      <a href="pdf/Der-Liebevolle-Schutz-DE.pdf" class="btn-download" target="_blank">
+        ↓ PDF — Deutsch
+      </a>
+
+      <a href="https://www.amazon.de/LIEBEVOLLE-SCHUTZ-Fiktion-entscheidest-Mensch/dp/B0H15LS1KG/" class="btn-download" target="_blank">
+        📖 Amazon DE
+      </a>
+
+      <br><br>
+
+      <a href="pdf/Der-Liebevolle-Schutz-EN.pdf" class="btn-download" target="_blank">
+        ↓ PDF — English
+      </a>
+
+      <a href="https://www.amazon.com/-/es/Mr-Felix-Christoph-Novak/dp/B0H1BKQM4L/" class="btn-download" target="_blank">
+        📖 Amazon EN
+      </a>
+
+      <br><br>
+
+      <a href="pdf/Der-Liebevolle-Schutz-ES.pdf" class="btn-download" target="_blank">
+        ↓ PDF — Español
+      </a>
+
+      <a href="https://www.amazon.es/PROTECCI%C3%93N-AMOROSA-%C2%BFFicci%C3%B3n-decides-humano/dp/B0H1BFSMF1/" class="btn-download" target="_blank">
+        📖 Amazon ES
+      </a>
+    </div>
+
+    <!-- BOOK 2 -->
+    <div class="book-card">
+      <div class="book-number">
+        <span data-lang="de" class="active">Buch II</span>
+        <span data-lang="en">Book II</span>
+        <span data-lang="es">Libro II</span>
+      </div>
+      <div class="book-title">Die Sucht im 21. Jahrhundert heißt Kill Web</div>
+      <div class="book-subtitle">
+        <span data-lang="de" class="active">Forensischer Zeitzeugenbericht</span>
+        <span data-lang="en">Forensic Contemporary Witness Account</span>
+        <span data-lang="es">Informe Forense de Testigo Contemporáneo</span>
+      </div>
+      <div class="book-status">
+        <span data-lang="de" class="active">In Arbeit · 2025/2026</span>
+        <span data-lang="en">In Progress · 2025/2026</span>
+        <span data-lang="es">En Progreso · 2025/2026</span>
+      </div>
+      <div class="book-desc">
+        <span data-lang="de" class="active">
+          Kein akademisches Werk. Ein Zeugenbericht aus dem Inneren unserer Zeit.
+          Wie das Kill Web funktioniert. Was es mit Menschen macht.
+          Wie Japan seine Alten digital ausschließt. Wie Spanien es wiederholt.
+          Und warum 48 Stunden ohne Netz mehr verraten als tausend Studien.
+        </span>
+        <span data-lang="en">
+          Not an academic work. A witness report from inside our time.
+          How the Kill Web works. What it does to people.
+          How Japan digitally excludes its elderly. How Spain repeats it.
+          And why 48 hours without the net reveals more than a thousand studies.
+        </span>
+        <span data-lang="es">
+          No una obra académica. Un informe testimonial desde el interior de nuestro tiempo.
+          Cómo funciona el Kill Web. Qué le hace a la gente.
+          Cómo Japón excluye digitalmente a sus mayores. Cómo España lo repite.
+          Y por qué 48 horas sin red revelan más que mil estudios.
+        </span>
+      </div>
+      <a href="#" class="btn-download disabled" onclick="alert('Kommentare folgen bald.\n\nComments coming soon.\n\nComentarios próximamente.\n\nfenova27(at)gmail.com'); return false;">
+        <span data-lang="de" class="active">↓ PDF — bald verfügbar</span>
+        <span data-lang="en">↓ PDF — coming soon</span>
+        <span data-lang="es">↓ PDF — próximamente</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- COMMENTS -->
+<section id="stimmen">
+  <div class="section-label">
+    <span data-lang="de" class="active">Stimmen der Leser</span>
+    <span data-lang="en">Reader Voices</span>
+    <span data-lang="es">Voces de Lectores</span>
+  </div>
+  <h2>
+    <span data-lang="de" class="active">Was Menschen sagen</span>
+    <span data-lang="en">What People Say</span>
+    <span data-lang="es">Lo Que Dice la Gente</span>
+  </h2>
+
+  <div class="comment-section">
+    <div class="comment-box">
+      <div class="comment-meta">M.L. — München, Deutschland</div>
+      <div class="comment-text">"Ich habe das Buch an einem Wochenende gelesen und danach mein Smartphone für zwei Tage weggelegt. Felix hat etwas beschrieben, das ich schon lange spürte, aber nicht benennen konnte."</div>
+    </div>
+    <div class="comment-box">
+      <div class="comment-meta">C.R. — Barcelona, España</div>
+      <div class="comment-text">"Lo leí en español. Cada página fue un espejo. No es ciencia ficción. Es lo que vivo cada día con mis hijos."</div>
+    </div>
+    <div class="comment-box">
+      <div class="comment-meta">J.W. — London, UK</div>
+      <div class="comment-text">"The ∞° concept stayed with me. A book that doesn't give answers — it gives back questions you forgot to ask."</div>
+    </div>
+
+    <div class="comment-form" id="comment-form">
+      <h3 style="font-family:'Cormorant Garamond',serif; font-weight:300; color:var(--white); margin-bottom:1.5rem; font-size:1.4rem;">
+        <span data-lang="de" class="active">Deine Stimme</span>
+        <span data-lang="en">Your Voice</span>
+        <span data-lang="es">Tu Voz</span>
+      </h3>
+      <input type="text" placeholder="Name / Ort — Name / City — Nombre / Ciudad">
+      <textarea placeholder="Dein Kommentar — Your comment — Tu comentario"></textarea>
+      
+<button class="btn-download" onclick="alert('Kommentare folgen bald. / Comments coming soon. / Comentarios próximamente.'); return false;">
+  <span data-lang="de" class="active">Kommentar senden</span>
+  <span data-lang="en">Send Comment</span>
+  <span data-lang="es">Enviar Comentario</span>
+</button>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- DONATION -->
+<section id="spende">
+  <div class="donation-block">
+    <div class="donation-seal">∞°</div>
+    <div class="donation-title">
+      <span data-lang="de" class="active">Wenn es Dir etwas bedeutet</span>
+      <span data-lang="en">If it Means Something to You</span>
+      <span data-lang="es">Si Significa Algo para Ti</span>
+    </div>
+    <div class="donation-text">
+      <span data-lang="de" class="active">
+        Wenn Dir diese Arbeit etwas wert ist — eine kleine Spende hilft mir, die laufenden Kosten dieser Seite zu tragen. Und wer weiß — vielleicht reicht es irgendwann wieder für eine Reise. 😄<br><br>
+        Nicht mehr, nicht weniger.
+      </span>
+      <span data-lang="en">
+        If this work means something to you — a small donation helps me cover the running costs of this site. And who knows — maybe one day it'll stretch to a journey. 😄<br><br>
+        Nothing more, nothing less.
+      </span>
+      <span data-lang="es">
+        Si este trabajo significa algo para ti — una pequeña donación me ayuda a cubrir los gastos de este sitio. Y quién sabe — quizás algún día alcance también para un viaje. 😄<br><br>
+        Nada más, nada menos.
+      </span>
+    </div>
+    <a href="https://www.paypal.com/donate/?hosted_button_id=ZZFYHQC9VGFVA" class="btn-paypal" target="_blank">
+      <span class="paypal-logo"><span>Pay</span><span>Pal</span></span>
+      &nbsp;|&nbsp;
+      <span data-lang="de" class="active">Jetzt spenden</span>
+      <span data-lang="en">Donate Now</span>
+      <span data-lang="es">Donar Ahora</span>
+    </a>
+    <p style="margin-top:1.5rem; font-size:1rem; color:#3a3020; font-style:italic;">
+      <span data-lang="de" class="active">* PayPal-Link wird mit Deinem echten Konto verknüpft nach der Installation</span>
+      <span data-lang="en">* PayPal link will be connected to your real account after installation</span>
+      <span data-lang="es">* El enlace de PayPal se conectará a tu cuenta real tras la instalación</span>
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-seal">∞°</div>
+  <div>Axiom-Zero.com &mdash; Felix Christoph Novak &mdash; Dénia, España</div>
+  <div style="margin-top:0.5rem; color:var(--gold-dim);">
+    <span data-lang="de" class="active">Kein Copyright. Teile es, wenn es Dir etwas bedeutet.</span>
+    <span data-lang="en">No copyright. Share it if it means something to you.</span>
+    <span data-lang="es">Sin copyright. Compártelo si significa algo para ti.</span>
+  </div>
+  <div style="margin-top:1.5rem; font-size:0.85rem;">
+    <a href="impressum.html" style="color:#6b4f00; margin:0 1rem;">Impressum</a>
+    <a href="datenschutz.html" style="color:#6b4f00; margin:0 1rem;">Datenschutz</a>
+    <a href="cookies.html" style="color:#6b4f00; margin:0 1rem;">Cookies</a>
+  </div>
+
+</footer>
+
+<script>
+// STARFIELD
+const starsContainer = document.getElementById('stars');
+for (let i = 0; i < 200; i++) {
+  const star = document.createElement('div');
+  star.className = 'star';
+  const size = Math.random() * 2.5 + 0.5;
+  star.style.cssText = `
+    width: ${size}px;
+    height: ${size}px;
+    left: ${Math.random() * 100}%;
+    top: ${Math.random() * 100}%;
+    --op: ${Math.random() * 0.6 + 0.2};
+    --dur: ${Math.random() * 5 + 3}s;
+    --delay: ${Math.random() * 6}s;
+  `;
+  starsContainer.appendChild(star);
+}
+
+// LANGUAGE SWITCHER
+function setLang(lang) {
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    el.classList.toggle('active', el.dataset.lang === lang);
+  });
+  document.querySelectorAll('[data-lang-inline]').forEach(el => {
+    el.classList.toggle('active', el.dataset.langInline === lang);
+  });
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+  });
+  // Update nav links
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    const key = `data-nav-${lang}`;
+    if (a.getAttribute(key)) a.textContent = a.getAttribute(key);
+  });
+  document.documentElement.lang = lang;
+}
+
+// Smooth reveal on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('section, .book-card').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(30px)';
+  el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+  observer.observe(el);
+});
+</script>
+</body>
+</html>

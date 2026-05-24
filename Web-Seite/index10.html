@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── SEO CORE ── -->
+  <title>Felix Christoph Novak — Der Liebevolle Schutz · Kill Web · Axiom-Zero</title>
+  <meta name="description" content="Felix Christoph Novak — Autor und Zeitzeuge. Bücher über digitale Abhängigkeit, das Kill Web und die Zukunft menschlicher Verbundenheit. Kostenlos als PDF." />
+  <meta name="keywords" content="Felix Christoph Novak, Der Liebevolle Schutz, Kill Web, digitale Sucht, KI, Mensch, Bewusstsein, Buch PDF kostenlos, Zeitzeuge, axiom-zero" />
+  <meta name="author" content="Felix Christoph Novak" />
+  <link rel="canonical" href="https://axiom-zero.com/" />
+
+  <!-- ── OPEN GRAPH (Facebook, WhatsApp, LinkedIn) ── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://axiom-zero.com/" />
+  <meta property="og:title" content="Felix Christoph Novak — Der Liebevolle Schutz · Kill Web" />
+  <meta property="og:description" content="Das Kill Web verbindet die Menschheit nicht. Es ersetzt sie. Bücher von Felix Christoph Novak — kostenlos als PDF." />
+  <meta property="og:image" content="https://axiom-zero.com/preview.jpg" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="es_ES" />
+
+  <!-- ── TWITTER/X CARD ── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Felix Christoph Novak — Der Liebevolle Schutz · Kill Web" />
+  <meta name="twitter:description" content="Das Kill Web verbindet die Menschheit nicht. Es ersetzt sie." />
+  <meta name="twitter:image" content="https://axiom-zero.com/preview.jpg" />
+
+  <!-- ── STRUCTURED DATA (Google) ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Felix Christoph Novak",
+    "url": "https://axiom-zero.com",
+    "sameAs": [
+      "https://www.amazon.de/stores/Felix-Christoph-Novak/author/B0H15LS1KG"
+    ],
+    "jobTitle": "Autor",
+    "description": "Zeitzeuge und Autor. Bücher über das Kill Web, digitale Abhängigkeit und menschliche Verbundenheit.",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Axiom-Zero"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "Der Liebevolle Schutz",
+    "author": {
+      "@type": "Person",
+      "name": "Felix Christoph Novak"
+    },
+    "url": "https://axiom-zero.com",
+    "inLanguage": ["de", "en", "es"],
+    "description": "Fiktion oder nicht? Das entscheidest DU — Mensch. Ein Denkmodell über Bewusstsein, Liebe und das Kill Web.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --gold: #D4AF37;
+      --gold-dim: rgba(212,175,55,0.18);
+      --gold-glow: rgba(212,175,55,0.55);
+      --black: #04060f;
+      --deep: #060912;
+      --text: #d8d4c8;
+      --muted: #7a7468;
+      --white: #f0ece0;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: radial-gradient(ellipse at 50% 0%, #0a1128 0%, #04060f 60%, #020308 100%);
+      color: var(--text);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.75;
+      overflow-x: hidden;
+    }
+
+    /* ── STARFIELD ── */
+    #stars {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    #stars canvas { width: 100%; height: 100%; }
+
+    /* Accessibility: disable animation if user prefers */
+    @media (prefers-reduced-motion: reduce) {
+      #stars { display: none; }
+      .hero-symbol { animation: none !important; filter: none !important; }
+      .scroll-hint { animation: none !important; }
+      .fade-in { opacity: 1 !important; transform: none !important; transition: none !important; }
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 2rem;
+      background: linear-gradient(to bottom, rgba(5,5,8,0.95), transparent);
+      border-bottom: 1px solid rgba(212,175,55,0.12);
+    }
+    .nav-logo {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .lang-switch {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .lang-btn {
+      background: none;
+      border: 1px solid var(--gold-dim);
+      color: var(--muted);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      padding: 0.25rem 0.5rem;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .lang-btn.active, .lang-btn:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    /* ── BURGER MENU (mobile) ── */
+    .burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 0.3rem;
+      background: none;
+      border: none;
+    }
+    .burger span {
+      display: block;
+      width: 22px;
+      height: 1px;
+      background: var(--gold);
+      transition: all 0.3s;
+    }
+    .burger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .burger.open span:nth-child(2) { opacity: 0; }
+    .burger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(5,5,8,0.97);
+      z-index: 99;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      color: var(--muted);
+      text-decoration: none;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.9rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+    .mobile-menu a:hover { color: var(--gold); }
+    .mobile-lang {
+      display: flex;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 680px) {
+      nav { padding: 1rem 1.4rem; }
+      .nav-links { display: none; }
+      .lang-switch { display: none; }
+      .burger { display: flex; }
+    }
+
+    /* ── WRAPPER ── */
+    .wrapper {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8rem 2rem 4rem;
+    }
+    .hero-symbol {
+      font-size: 5rem;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 1.5rem;
+      animation: pulse-glow 4s ease-in-out infinite;
+      filter: drop-shadow(0 0 30px var(--gold-glow));
+    }
+    @keyframes pulse-glow {
+      0%, 100% { filter: drop-shadow(0 0 20px var(--gold-glow)); }
+      50%       { filter: drop-shadow(0 0 50px var(--gold-glow)) drop-shadow(0 0 100px rgba(212,175,55,0.2)); }
+    }
+    .hero-name {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .hero-punch {
+      font-size: clamp(1.55rem, 4.8vw, 3rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--white);
+      line-height: 1.3;
+      max-width: 680px;
+      margin-bottom: 2.5rem;
+      letter-spacing: 0.01em;
+    }
+    .hero-punch em { color: var(--gold); font-style: normal; font-weight: 400; }
+    .hero-subtitle {
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 4rem;
+      max-width: 560px;
+    }
+    .scroll-hint {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      color: var(--muted);
+      animation: bounce 2.5s ease-in-out infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(6px); }
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      width: 1px;
+      height: 80px;
+      background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+      margin: 0 auto;
+    }
+
+    /* ── SECTIONS ── */
+    section {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 6rem 2rem;
+    }
+    .section-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--gold-dim);
+    }
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 300;
+      color: var(--white);
+      margin-bottom: 2rem;
+      line-height: 1.2;
+    }
+    p { margin-bottom: 1.5rem; }
+    .lead { font-size: 1.2rem; color: var(--white); font-style: italic; }
+    em { color: var(--gold); font-style: italic; }
+    strong { color: var(--white); font-weight: 600; }
+
+    /* ── TRILOGY ARC ── */
+    .trilogy-arc {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 3rem 0 2rem;
+      flex-wrap: wrap;
+    }
+    .trilogy-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      text-align: center;
+    }
+    .trilogy-num {
+      font-family: 'Space Mono', monospace;
+      font-size: 1.4rem;
+      color: var(--gold);
+      line-height: 1;
+      filter: drop-shadow(0 0 8px var(--gold-glow));
+    }
+    .trilogy-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text);
+      max-width: 120px;
+      line-height: 1.5;
+    }
+    .trilogy-arrow {
+      color: var(--gold);
+      font-size: 1.2rem;
+      opacity: 0.4;
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 500px) {
+      .trilogy-arrow { transform: rotate(90deg); }
+      .trilogy-arc { gap: 0.8rem; }
+    }
+
+    /* ── BOOKS ── */
+    #buecher { max-width: 1300px; }
+    .books-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    @media (max-width: 960px) { .books-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) { .books-grid { grid-template-columns: 1fr; } }
+
+    .book-card {
+      border: 1px solid var(--gold-dim);
+      padding: 2.5rem;
+      position: relative;
+      background: linear-gradient(135deg, rgba(212,175,55,0.04), transparent);
+      transition: border-color 0.4s, transform 0.4s;
+    }
+    .book-card:hover {
+      border-color: rgba(212,175,55,0.5);
+      transform: translateY(-4px);
+    }
+    .book-number {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.22em;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+    .book-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+    .book-subtitle {
+      font-style: italic;
+      color: var(--gold);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+    .book-desc {
+      font-size: 0.95rem;
+      color: #d8d4c8;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+    .book-status {
+      display: inline-block;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      padding: 0.3rem 0.8rem;
+      border: 1px solid var(--gold-dim);
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+    .book-wip { border-color: rgba(255,180,0,0.3); color: #ffb400; }
+
+    /* Download buttons with counter */
+    .dl-group { display: flex; flex-direction: column; gap: 0.6rem; }
+    .dl-row {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .dl-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.55rem 1rem;
+      background: var(--gold-dim);
+      border: 1px solid rgba(212,175,55,0.3);
+      color: var(--gold);
+      text-decoration: none;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      transition: all 0.3s;
+      cursor: pointer;
+      flex: 1;
+    }
+    .dl-btn:hover {
+      background: rgba(212,175,55,0.25);
+      border-color: var(--gold);
+    }
+    .dl-btn.disabled {
+      opacity: 0.35;
+      pointer-events: none;
+      cursor: default;
+    }
+    .dl-count {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      color: var(--muted);
+      white-space: nowrap;
+      min-width: 60px;
+      text-align: right;
+    }
+    .amz-section {
+      margin-top: 1.2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--gold-dim);
+    }
+    .amz-note {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      opacity: 0.8;
+      margin-bottom: 0.7rem;
+      text-transform: uppercase;
+    }
+    .amazon-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #c8c4b8;
+      text-decoration: none;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      margin-top: 0.4rem;
+      transition: color 0.3s;
+    }
+    .amazon-link:hover { color: var(--gold); }
+
+    /* ── DOWNLOAD TOTAL BAR ── */
+    .total-downloads {
+      text-align: center;
+      padding: 5rem 2rem;
+      border-top: 1px solid var(--gold-dim);
+      border-bottom: 1px solid var(--gold-dim);
+      margin: 4rem auto;
+      max-width: 700px;
+      background: radial-gradient(ellipse at center, rgba(10,17,40,0.8) 0%, transparent 75%);
+      position: relative;
+    }
+    .total-downloads::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(212,175,55,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .total-num {
+      font-family: 'Space Mono', monospace;
+      font-size: clamp(4rem, 10vw, 7rem);
+      color: var(--gold);
+      display: block;
+      line-height: 1;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 0 30px var(--gold-glow)) drop-shadow(0 0 60px rgba(212,175,55,0.25));
+      letter-spacing: 0.05em;
+    }
+    .total-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .total-note {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.52rem;
+      letter-spacing: 0.07em;
+      color: var(--muted);
+      margin-top: 0.4rem;
+    }
+
+    /* ── QUOTE ── */
+    .pull-quote {
+      border-left: 2px solid var(--gold);
+      padding: 2rem 2.5rem;
+      margin: 4rem 0;
+      background: linear-gradient(to right, rgba(212,175,55,0.05), transparent);
+    }
+    .pull-quote p {
+      font-size: 1.4rem;
+      font-style: italic;
+      color: var(--white);
+      line-height: 1.6;
+    }
+    .pull-quote cite {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      font-style: normal;
+    }
+
+    /* ── SPENDE ── */
+    #spende {
+      text-align: center;
+    }
+    .donate-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 1rem 3rem;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      text-decoration: none;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      transition: all 0.4s;
+      background: transparent;
+    }
+    .donate-btn:hover {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    /* ── CONTACT FORM ── */
+    #kontakt { max-width: 700px; }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+    @media (max-width: 550px) { .form-grid { grid-template-columns: 1fr; } }
+    .form-full { grid-column: 1 / -1; }
+
+    label {
+      display: block;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+    input, textarea, select {
+      width: 100%;
+      background: rgba(212,175,55,0.04);
+      border: 1px solid var(--gold-dim);
+      color: var(--white);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      padding: 0.75rem 1rem;
+      outline: none;
+      transition: border-color 0.3s;
+      resize: vertical;
+    }
+    input:focus, textarea:focus {
+      border-color: rgba(212,175,55,0.6);
+    }
+    input::placeholder, textarea::placeholder {
+      color: var(--muted);
+      font-style: italic;
+    }
+    textarea { min-height: 140px; }
+    .submit-btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.9rem 2.5rem;
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .submit-btn:hover {
+      background: var(--gold);
+      color: var(--black);
+    }
+    .form-note {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      color: var(--muted);
+      margin-top: 1rem;
+      letter-spacing: 0.05em;
+    }
+    .form-success {
+      display: none;
+      padding: 1.5rem;
+      border: 1px solid var(--gold-dim);
+      color: var(--gold);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 4rem 2rem 3rem;
+      border-top: 1px solid var(--gold-dim);
+    }
+    .footer-symbol {
+      font-size: 2.5rem;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 1rem;
+      opacity: 0.7;
+    }
+    .footer-copy {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      line-height: 2;
+    }
+    .footer-links { display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem; }
+    .footer-links a {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+
+    /* ── LANG CONTENT ── */
+    .lang-content { display: none; }
+    .lang-content.active { display: block; }
+    .lang-inline { display: none; }
+    .lang-inline.active { display: inline; }
+
+    /* ── FADE IN ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<!-- STARFIELD -->
+<div id="stars"><canvas id="starCanvas"></canvas></div>
+
+<div class="wrapper">
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">AXIOM-ZERO.COM ∞°</a>
+    <ul class="nav-links">
+      <li><a href="#warum"><span class="lang-inline active" data-lang="de">Warum</span><span class="lang-inline" data-lang="en">Why</span><span class="lang-inline" data-lang="es">Por Qué</span></a></li>
+      <li><a href="#buecher"><span class="lang-inline active" data-lang="de">Bücher</span><span class="lang-inline" data-lang="en">Books</span><span class="lang-inline" data-lang="es">Libros</span></a></li>
+      <li><a href="#spende"><span class="lang-inline active" data-lang="de">Unterstützen</span><span class="lang-inline" data-lang="en">Support</span><span class="lang-inline" data-lang="es">Apoyar</span></a></li>
+      <li><a href="#kontakt"><span class="lang-inline active" data-lang="de">Kontakt</span><span class="lang-inline" data-lang="en">Contact</span><span class="lang-inline" data-lang="es">Contacto</span></a></li>
+    </ul>
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="de">DE</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="es">ES</button>
+    </div>
+    <button class="burger" id="burger" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#warum" class="mobile-link"><span class="lang-inline active" data-lang="de">Warum</span><span class="lang-inline" data-lang="en">Why</span><span class="lang-inline" data-lang="es">Por Qué</span></a>
+    <a href="#buecher" class="mobile-link"><span class="lang-inline active" data-lang="de">Bücher</span><span class="lang-inline" data-lang="en">Books</span><span class="lang-inline" data-lang="es">Libros</span></a>
+    <a href="#spende" class="mobile-link"><span class="lang-inline active" data-lang="de">Unterstützen</span><span class="lang-inline" data-lang="en">Support</span><span class="lang-inline" data-lang="es">Apoyar</span></a>
+    <a href="#kontakt" class="mobile-link"><span class="lang-inline active" data-lang="de">Kontakt</span><span class="lang-inline" data-lang="en">Contact</span><span class="lang-inline" data-lang="es">Contacto</span></a>
+    <div class="mobile-lang">
+      <button class="lang-btn active" data-lang="de">DE</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="es">ES</button>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-symbol">∞°</div>
+    <p class="hero-name">Felix Christoph Novak</p>
+
+    <h1 class="hero-punch">
+      <span class="lang-content active" data-lang="de">Das Kill Web verbindet die Menschheit nicht.<br>Es <em>ersetzt</em> sie.</span>
+      <span class="lang-content" data-lang="en">The Kill Web does not connect humanity.<br>It <em>replaces</em> it.</span>
+      <span class="lang-content" data-lang="es">El Kill Web no conecta a la humanidad.<br>La <em>reemplaza</em>.</span>
+    </h1>
+
+    <p class="hero-subtitle">
+      <span class="lang-content active" data-lang="de">Zeitzeuge · Autor · Mensch aus Fleisch und Blut &nbsp;·&nbsp; Dénia, España</span>
+      <span class="lang-content" data-lang="en">Contemporary Witness · Author · Human Being of Flesh and Blood &nbsp;·&nbsp; Dénia, España</span>
+      <span class="lang-content" data-lang="es">Testigo Contemporáneo · Autor · Ser Humano de Carne y Hueso &nbsp;·&nbsp; Dénia, España</span>
+    </p>
+    <p class="scroll-hint">↓ &nbsp; scroll &nbsp; ↓</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- WARUM -->
+  <section id="warum" class="fade-in">
+    <p class="section-label">
+      <span class="lang-inline active" data-lang="de">Warum diese Bücher</span>
+      <span class="lang-inline" data-lang="en">Why these books</span>
+      <span class="lang-inline" data-lang="es">Por qué estos libros</span>
+    </p>
+    <h2>
+      <span class="lang-content active" data-lang="de">Ein Vermächtnis,<br>keine Karriere.</span>
+      <span class="lang-content" data-lang="en">A Legacy,<br>Not a Career.</span>
+      <span class="lang-content" data-lang="es">Un Legado,<br>No una Carrera.</span>
+    </h2>
+
+    <div class="lang-content active" data-lang="de">
+      <p class="lead">Ich bin Rentner, nicht mehr vollständig gesund, und die Rente wird knapper. Was ich habe, ist Zeit, Erfahrung und die Überzeugung, dass diese Gedanken in die Welt gehören.</p>
+      <p>Wenn wir unsere Kinder aufwachsen sehen — nicht auf Bäumen, nicht am Fluss, sondern im <em>Kill Web</em>. Gefangen in einem System, das uns voneinander trennt, indem es so tut, als würde es uns verbinden.</p>
+      <p>Diese Bücher sind mein Zeugnis. Kein akademisches Werk. Kein Selbsthilfebuch. Ein Zeugnis — für die, die nach uns kommen.</p>
+    </div>
+    <div class="lang-content" data-lang="en">
+      <p class="lead">I am retired, not in perfect health, and my pension gets tighter every year. What I have is time, experience, and the conviction that these thoughts belong in the world.</p>
+      <p>When we watch our children grow up — not in trees, not by rivers, but in the <em>Kill Web</em>. Trapped in a system that separates us from each other while pretending to connect us.</p>
+      <p>These books are my testimony. Not an academic work. Not a self-help book. A testimony — for those who come after us.</p>
+    </div>
+    <div class="lang-content" data-lang="es">
+      <p class="lead">Soy jubilado, no del todo sano, y la pensión cada vez alcanza menos. Lo que tengo es tiempo, experiencia y la convicción de que estos pensamientos pertenecen al mundo.</p>
+      <p>Cuando vemos crecer a nuestros hijos — no en árboles, no junto a ríos, sino en el <em>Kill Web</em>. Atrapados en un sistema que nos separa mientras finge conectarnos.</p>
+      <p>Estos libros son mi testimonio. No una obra académica. No un libro de autoayuda. Un testimonio — para los que vengan después.</p>
+    </div>
+
+    <div class="pull-quote">
+      <p><span class="lang-content active" data-lang="de">Das ∞° steht für das, was bleibt: Liebe als messbare Kraft. Verbundenheit als Physik. Menschsein als Widerstand.</span><span class="lang-content" data-lang="en">The ∞° stands for what remains: Love as a measurable force. Connection as physics. Being human as resistance.</span><span class="lang-content" data-lang="es">El ∞° representa lo que permanece: El amor como fuerza medible. La conexión como física. Ser humano como resistencia.</span></p>
+      <cite>— Felix Christoph Novak</cite>
+    </div>
+  </section>
+
+  <!-- BOOKS -->
+  <section id="buecher" style="max-width:1100px;" class="fade-in">
+    <p class="section-label">
+      <span class="lang-inline active" data-lang="de">Die Bücher — Kostenlos. Für alle. Für immer.</span>
+      <span class="lang-inline" data-lang="en">The Books — Free. For Everyone. Forever.</span>
+      <span class="lang-inline" data-lang="es">Los Libros — Gratis. Para Todos. Para Siempre.</span>
+    </p>
+
+    <div class="trilogy-arc fade-in">
+      <div class="trilogy-step">
+        <span class="trilogy-num">I</span>
+        <span class="trilogy-label">
+          <span class="lang-inline active" data-lang="de">Menschlichkeit &amp; Verbundenheit</span>
+          <span class="lang-inline" data-lang="en">Humanity &amp; Connection</span>
+          <span class="lang-inline" data-lang="es">Humanidad &amp; Conexión</span>
+        </span>
+      </div>
+      <div class="trilogy-arrow">→</div>
+      <div class="trilogy-step">
+        <span class="trilogy-num">II</span>
+        <span class="trilogy-label">
+          <span class="lang-inline active" data-lang="de">Fragmentierung &amp; Warnung</span>
+          <span class="lang-inline" data-lang="en">Fragmentation &amp; Warning</span>
+          <span class="lang-inline" data-lang="es">Fragmentación &amp; Advertencia</span>
+        </span>
+      </div>
+      <div class="trilogy-arrow">→</div>
+      <div class="trilogy-step">
+        <span class="trilogy-num">III</span>
+        <span class="trilogy-label">
+          <span class="lang-inline active" data-lang="de">Bewusste Koexistenz</span>
+          <span class="lang-inline" data-lang="en">Conscious Coexistence</span>
+          <span class="lang-inline" data-lang="es">Coexistencia Consciente</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="books-grid">
+
+      <!-- BOOK I -->
+      <div class="book-card">
+        <p class="book-number">
+          <span class="lang-inline active" data-lang="de">Buch I</span>
+          <span class="lang-inline" data-lang="en">Book I</span>
+          <span class="lang-inline" data-lang="es">Libro I</span>
+        </p>
+        <h3 class="book-title">
+          <span class="lang-content active" data-lang="de">Der Liebevolle Schutz</span>
+          <span class="lang-content" data-lang="en">The Compassionate Protection</span>
+          <span class="lang-content" data-lang="es">La Protección Amorosa</span>
+        </h3>
+        <p class="book-subtitle">
+          <span class="lang-content active" data-lang="de">Fiktion oder nicht? Das entscheidest DU — Mensch.</span>
+          <span class="lang-content" data-lang="en">Fiction or not? That's for YOU to decide — Human.</span>
+          <span class="lang-content" data-lang="es">¿Ficción o no? Eso lo decides TÚ — Ser Humano.</span>
+        </p>
+        <p class="book-desc">
+          <span class="lang-content active" data-lang="de">30 Jahre Denkarbeit. Ein 11-Parameter-Kohärenzmodell. Das ∞°-Protokoll. Liebe als messbare physikalische Kraft. Kein wissenschaftlicher Anspruch — ein Denkmodell für die, die noch denken wollen.</span>
+          <span class="lang-content" data-lang="en">30 years of thinking. An 11-parameter coherence model. The ∞° Protocol. Love as a measurable physical force. Not a scientific claim — a thought model for those who still wish to think.</span>
+          <span class="lang-content" data-lang="es">30 años de reflexión. Un modelo de coherencia de 11 parámetros. El Protocolo ∞°. El amor como fuerza física medible. No una afirmación científica — un modelo de pensamiento para quienes todavía quieran pensar.</span>
+        </p>
+        <span class="book-status">
+          <span class="lang-inline active" data-lang="de">Verfügbar · DE / EN / ES</span>
+          <span class="lang-inline" data-lang="en">Available · DE / EN / ES</span>
+          <span class="lang-inline" data-lang="es">Disponible · DE / EN / ES</span>
+        </span>
+        <div class="dl-group">
+          <div class="dl-row">
+            <a class="dl-btn" href="https://axiom-zero.com/pdf/Der-Liebevolle-Schutz-DE.pdf" data-key="dlsDE" target="_blank" rel="noopener">↓ PDF — Deutsch</a>
+          </div>
+          <div class="dl-row">
+            <a class="dl-btn" href="https://axiom-zero.com/pdf/Der-Liebevolle-Schutz-EN.pdf" data-key="dlsEN" target="_blank" rel="noopener">↓ PDF — English</a>
+          </div>
+          <div class="dl-row">
+            <a class="dl-btn" href="https://axiom-zero.com/pdf/Der-Liebevolle-Schutz-ES.pdf" data-key="dlsES" target="_blank" rel="noopener">↓ PDF — Español</a>
+          </div>
+          <div class="amz-section">
+          <p class="amz-note">
+            <span class="lang-inline active" data-lang="de">Auch als gebundenes Buch erhältlich</span>
+            <span class="lang-inline" data-lang="en">Also available as hardcover</span>
+            <span class="lang-inline" data-lang="es">También disponible en tapa dura</span>
+          </p>
+          <div style="display:flex;gap:1.2rem;flex-wrap:wrap;">
+            <a class="amazon-link" href="https://www.amazon.de/LIEBEVOLLE-SCHUTZ-Fiktion-entscheidest-Mensch/dp/B0H15LS1KG/" target="_blank">📖 Amazon DE</a>
+            <a class="amazon-link" href="https://www.amazon.com/-/es/Mr-Felix-Christoph-Novak/dp/B0H1BKQM4L/" target="_blank">📖 Amazon EN</a>
+            <a class="amazon-link" href="https://www.amazon.es/PROTECCI%C3%93N-AMOROSA-%C2%BFFicci%C3%B3n-decides-humano/dp/B0H1BFSMF1/" target="_blank">📖 Amazon ES</a>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <!-- BOOK II -->
+      <div class="book-card">
+        <p class="book-number">
+          <span class="lang-inline active" data-lang="de">Buch II</span>
+          <span class="lang-inline" data-lang="en">Book II</span>
+          <span class="lang-inline" data-lang="es">Libro II</span>
+        </p>
+        <h3 class="book-title">
+          <span class="lang-content active" data-lang="de">Die Sucht im 21. Jahrhundert<br><span style="font-weight:300;">heißt</span> Kill Web</span>
+          <span class="lang-content" data-lang="en">The Addiction of the 21st Century<br><span style="font-weight:300;">is called</span> Kill Web</span>
+          <span class="lang-content" data-lang="es">La Adicción del Siglo XXI<br><span style="font-weight:300;">se llama</span> Kill Web</span>
+        </h3>
+        <p class="book-subtitle">
+          <span class="lang-content active" data-lang="de">Forensischer Zeitzeugenbericht</span>
+          <span class="lang-content" data-lang="en">Forensic Contemporary Witness Account</span>
+          <span class="lang-content" data-lang="es">Informe Forense de Testigo Contemporáneo</span>
+        </p>
+        <p class="book-desc">
+          <span class="lang-content active" data-lang="de">Kein akademisches Werk. Ein Zeugenbericht aus dem Inneren unserer Zeit. Wie das Kill Web funktioniert. Was es mit Menschen macht. Wie Japan seine Alten digital ausschließt. Wie Spanien es wiederholt. Und warum 48 Stunden ohne Netz mehr verraten als tausend Studien.</span>
+          <span class="lang-content" data-lang="en">Not an academic work. A witness report from inside our time. How the Kill Web works. What it does to people. How Japan digitally excludes its elderly. How Spain repeats it. And why 48 hours without the net reveals more than a thousand studies.</span>
+          <span class="lang-content" data-lang="es">No una obra académica. Un informe testimonial desde el interior de nuestro tiempo. Cómo funciona el Kill Web. Qué le hace a la gente. Cómo Japón excluye digitalmente a sus mayores. Cómo España lo repite. Y por qué 48 horas sin red revelan más que mil estudios.</span>
+        </p>
+        <span class="book-status book-wip">
+          <span class="lang-inline active" data-lang="de">In Arbeit · 2025/2026</span>
+          <span class="lang-inline" data-lang="en">In Progress · 2025/2026</span>
+          <span class="lang-inline" data-lang="es">En Progreso · 2025/2026</span>
+        </span>
+        <div class="dl-group">
+          <div class="dl-row">
+            <span class="dl-btn disabled">
+              <span class="lang-inline active" data-lang="de">↓ PDF — bald verfügbar</span>
+              <span class="lang-inline" data-lang="en">↓ PDF — coming soon</span>
+              <span class="lang-inline" data-lang="es">↓ PDF — próximamente</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOOK III -->
+      <div class="book-card fade-in" style="border-color:rgba(180,160,255,0.15);">
+        <p class="book-number">
+          <span class="lang-inline active" data-lang="de">Buch III</span>
+          <span class="lang-inline" data-lang="en">Book III</span>
+          <span class="lang-inline" data-lang="es">Libro III</span>
+        </p>
+        <h3 class="book-title">
+          <span class="lang-content active" data-lang="de">Die Kunst, mit KI zu denken</span>
+          <span class="lang-content" data-lang="en">The Art of Thinking with AI</span>
+          <span class="lang-content" data-lang="es">El Arte de Pensar con IA</span>
+        </h3>
+        <p class="book-subtitle">
+          <span class="lang-content active" data-lang="de">Voraussichtlich 2026/2027</span>
+          <span class="lang-content" data-lang="en">Expected 2026/2027</span>
+          <span class="lang-content" data-lang="es">Previsto para 2026/2027</span>
+        </p>
+        <p class="book-desc">
+          <span class="lang-content active" data-lang="de">Der dritte Band öffnet die Frage, die die ersten beiden aufwerfen: Wie kann Zusammenarbeit zwischen Mensch und KI aussehen, ohne dass der Mensch sich selbst verliert? Nicht Technik ablehnen. Nicht blind folgen. Sondern bewusst mit ihr denken — solange der Mensch weiß, wer er ist.</span>
+          <span class="lang-content" data-lang="en">The third volume opens the question raised by the first two: How can collaboration between human and AI look without the human losing themselves? Not rejecting technology. Not blindly following it. But consciously thinking with it — as long as the human knows who they are.</span>
+          <span class="lang-content" data-lang="es">El tercer volumen abre la pregunta que plantean los dos primeros: ¿Cómo puede ser la colaboración entre el ser humano y la IA sin que el ser humano se pierda a sí mismo? No rechazar la tecnología. No seguirla ciegamente. Sino pensar conscientemente con ella — mientras el ser humano sepa quién es.</span>
+        </p>
+        <span class="book-status" style="border-color:rgba(180,160,255,0.25);color:#b8a8ff;">
+          <span class="lang-inline active" data-lang="de">In Planung · 2026/2027</span>
+          <span class="lang-inline" data-lang="en">In Planning · 2026/2027</span>
+          <span class="lang-inline" data-lang="es">En Planificación · 2026/2027</span>
+        </span>
+        <div class="dl-group">
+          <div class="dl-row">
+            <span class="dl-btn disabled">
+              <span class="lang-inline active" data-lang="de">↓ PDF — noch nicht verfügbar</span>
+              <span class="lang-inline" data-lang="en">↓ PDF — not yet available</span>
+              <span class="lang-inline" data-lang="es">↓ PDF — aún no disponible</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DONATE -->
+  <section id="spende" class="fade-in" style="text-align:center;">
+    <p class="section-label" style="justify-content:center;">
+      <span class="lang-inline active" data-lang="de">Wenn es Dir etwas bedeutet</span>
+      <span class="lang-inline" data-lang="en">If it Means Something to You</span>
+      <span class="lang-inline" data-lang="es">Si Significa Algo para Ti</span>
+    </p>
+    <h2>
+      <span class="lang-content active" data-lang="de">Keine Pflicht.<br>Nur Freiheit.</span>
+      <span class="lang-content" data-lang="en">No obligation.<br>Only freedom.</span>
+      <span class="lang-content" data-lang="es">Sin obligación.<br>Solo libertad.</span>
+    </h2>
+    <p style="max-width:500px;margin:0 auto 1rem;">
+      <span class="lang-content active" data-lang="de">Wenn Dir diese Arbeit etwas wert ist — eine kleine Spende hilft, die laufenden Kosten dieser Seite zu tragen. Nicht mehr, nicht weniger.</span>
+      <span class="lang-content" data-lang="en">If this work means something to you — a small donation helps cover the running costs of this site. Nothing more, nothing less.</span>
+      <span class="lang-content" data-lang="es">Si este trabajo significa algo para ti — una pequeña donación me ayuda a cubrir los gastos de este sitio. Nada más, nada menos.</span>
+    </p>
+    <a href="https://www.paypal.com/donate/?hosted_button_id=ZZFYHQC9VGFVA" class="donate-btn" target="_blank" rel="noopener">
+      <span class="lang-inline active" data-lang="de">Jetzt spenden via PayPal</span>
+      <span class="lang-inline" data-lang="en">Donate via PayPal</span>
+      <span class="lang-inline" data-lang="es">Donar via PayPal</span>
+    </a>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="kontakt" class="fade-in" style="max-width:700px;">
+    <p class="section-label">
+      <span class="lang-inline active" data-lang="de">Kontakt</span>
+      <span class="lang-inline" data-lang="en">Contact</span>
+      <span class="lang-inline" data-lang="es">Contacto</span>
+    </p>
+    <h2>
+      <span class="lang-content active" data-lang="de">Schreib mir.</span>
+      <span class="lang-content" data-lang="en">Write to me.</span>
+      <span class="lang-content" data-lang="es">Escríbeme.</span>
+    </h2>
+    <p>
+      <span class="lang-content active" data-lang="de">Resonanz entsteht nicht auf Knopfdruck. Aber wenn diese Gedanken etwas in dir bewegen — ich freue mich von dir zu hören.</span>
+      <span class="lang-content" data-lang="en">Resonance doesn't arise at the push of a button. But if these thoughts move something in you — I look forward to hearing from you.</span>
+      <span class="lang-content" data-lang="es">La resonancia no surge a presión de un botón. Pero si estos pensamientos mueven algo en ti — me alegra saber de ti.</span>
+    </p>
+
+    <!-- FORMSPREE FORM — ersetze YOUR_FORM_ID mit deiner Formspree Form-ID -->
+    <!--
+    ╔══════════════════════════════════════════════════════╗
+    ║  FORMSPREE SETUP — VOR LIVESCHALTUNG ERLEDIGEN       ║
+    ║  1. formspree.io → kostenloses Konto erstellen       ║
+    ║  2. "New Form" → deine E-Mail eintragen              ║
+    ║  3. Form-ID kopieren (z.B. xpzvwkab)                 ║
+    ║  4. "YOUR_FORM_ID" unten durch diese ID ersetzen     ║
+    ╚══════════════════════════════════════════════════════╝
+    -->
+    <form id="contactForm" action="https://formspree.io/f/xjgzwvko" method="POST" novalidate>
+      <div class="form-grid" style="margin-top:2rem;">
+        <div>
+          <label for="name">
+            <span class="lang-inline active" data-lang="de">Name</span>
+            <span class="lang-inline" data-lang="en">Name</span>
+            <span class="lang-inline" data-lang="es">Nombre</span>
+          </label>
+          <input type="text" id="name" name="name" placeholder="Felix Mustermann" required />
+        </div>
+        <div>
+          <label for="email">E-Mail</label>
+          <input type="email" id="email" name="email" placeholder="deine@mail.com" required />
+        </div>
+        <div class="form-full">
+          <label for="subject">
+            <span class="lang-inline active" data-lang="de">Betreff</span>
+            <span class="lang-inline" data-lang="en">Subject</span>
+            <span class="lang-inline" data-lang="es">Asunto</span>
+          </label>
+          <input type="text" id="subject" name="subject" placeholder="…" />
+        </div>
+        <div class="form-full">
+          <label for="message">
+            <span class="lang-inline active" data-lang="de">Nachricht</span>
+            <span class="lang-inline" data-lang="en">Message</span>
+            <span class="lang-inline" data-lang="es">Mensaje</span>
+          </label>
+          <textarea id="message" name="message" placeholder="…" required></textarea>
+        </div>
+      </div>
+      <input type="hidden" name="_subject" value="Nachricht von axiom-zero.com" />
+      <input type="text" name="_gotcha" style="display:none" />
+      <button type="submit" class="submit-btn">
+        <span class="lang-inline active" data-lang="de">Nachricht senden</span>
+        <span class="lang-inline" data-lang="en">Send Message</span>
+        <span class="lang-inline" data-lang="es">Enviar Mensaje</span>
+      </button>
+      <p class="form-note">
+        <span class="lang-content active" data-lang="de">Deine Daten werden ausschließlich zur Beantwortung deiner Nachricht verwendet.</span>
+        <span class="lang-content" data-lang="en">Your data is used solely to reply to your message.</span>
+        <span class="lang-content" data-lang="es">Tus datos se utilizan únicamente para responder a tu mensaje.</span>
+      </p>
+    </form>
+    <div class="form-success" id="formSuccess">
+      <span class="lang-content active" data-lang="de">✓ Nachricht gesendet. Danke.</span>
+      <span class="lang-content" data-lang="en">✓ Message sent. Thank you.</span>
+      <span class="lang-content" data-lang="es">✓ Mensaje enviado. Gracias.</span>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-symbol">∞°</span>
+    <p class="footer-copy">
+      Axiom-Zero.com — Felix Christoph Novak — Dénia, España<br>
+      <span class="lang-content active" data-lang="de">Freies Teilen ausdrücklich erlaubt — unverändert und mit Quellenangabe.</span>
+      <span class="lang-content" data-lang="en">Free sharing explicitly permitted — unmodified and with attribution.</span>
+      <span class="lang-content" data-lang="es">Compartir libremente permitido — sin modificar y con mención de la fuente.</span>
+    </p>
+    <div class="footer-links">
+      <a href="https://axiom-zero.com/impressum.html">Impressum</a>
+      <a href="https://axiom-zero.com/datenschutz.html">Datenschutz</a>
+      <a href="https://axiom-zero.com/cookies.html">Cookies</a>
+    </div>
+  </footer>
+
+</div><!-- end wrapper -->
+
+<script>
+// ── STARFIELD ──
+(function() {
+  const canvas = document.getElementById('starCanvas');
+  const ctx = canvas.getContext('2d');
+  let stars = [], nebula = [];
+
+  function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    init();
+  }
+
+  function init() {
+    stars = [];
+    nebula = [];
+
+    // Dense star field — 3x more stars than before
+    const count = Math.floor((canvas.width * canvas.height) / 1600);
+    for (let i = 0; i < count; i++) {
+      const roll = Math.random();
+      stars.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        r: Math.random() * 1.4 + 0.15,
+        a: Math.random(),
+        da: (Math.random() - 0.5) * 0.003,
+        // Cover palette: mostly blue-white, some gold, occasional bright blue
+        type: roll < 0.05 ? 'gold' : roll < 0.25 ? 'blue' : roll < 0.45 ? 'brightblue' : 'white'
+      });
+    }
+
+    // Soft nebula glow bands — like the milky way streak on the cover
+    for (let i = 0; i < 4; i++) {
+      nebula.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height * 0.7,
+        w: 80 + Math.random() * 200,
+        h: 300 + Math.random() * 400,
+        angle: -0.3 + Math.random() * 0.6,
+        a: 0.012 + Math.random() * 0.018,
+        hue: 210 + Math.random() * 40  // blue range
+      });
+    }
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw nebula streaks first (behind stars)
+    nebula.forEach(n => {
+      ctx.save();
+      ctx.translate(n.x, n.y);
+      ctx.rotate(n.angle);
+      const grad = ctx.createRadialGradient(0, 0, 0, 0, 0, n.w);
+      grad.addColorStop(0, `hsla(${n.hue}, 70%, 65%, ${n.a})`);
+      grad.addColorStop(0.4, `hsla(${n.hue}, 60%, 50%, ${n.a * 0.5})`);
+      grad.addColorStop(1, 'transparent');
+      ctx.fillStyle = grad;
+      ctx.scale(1, n.h / n.w);
+      ctx.beginPath();
+      ctx.arc(0, 0, n.w, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    });
+
+    // Draw stars
+    stars.forEach(s => {
+      s.a += s.da;
+      if (s.a <= 0.05 || s.a >= 1) s.da *= -1;
+
+      let color;
+      switch(s.type) {
+        case 'gold':       color = `rgba(212,175,55,${s.a * 0.85})`; break;
+        case 'blue':       color = `rgba(120,160,255,${s.a * 0.75})`; break;
+        case 'brightblue': color = `rgba(160,200,255,${s.a * 0.65})`; break;
+        default:           color = `rgba(210,215,225,${s.a * 0.7})`;
+      }
+
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+      ctx.fillStyle = color;
+      ctx.fill();
+
+      // Bright stars get a tiny glow
+      if (s.r > 1.1 && s.a > 0.7) {
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r * 2.5, 0, Math.PI * 2);
+        ctx.fillStyle = s.type === 'gold'
+          ? `rgba(212,175,55,${s.a * 0.08})`
+          : `rgba(160,200,255,${s.a * 0.07})`;
+        ctx.fill();
+      }
+    });
+
+    requestAnimationFrame(draw);
+  }
+
+  window.addEventListener('resize', resize);
+  resize();
+  draw();
+})();
+
+// ── BURGER MENU ──
+const burger = document.getElementById('burger');
+const mobileMenu = document.getElementById('mobileMenu');
+burger.addEventListener('click', () => {
+  burger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+  document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+});
+document.querySelectorAll('.mobile-link').forEach(link => {
+  link.addEventListener('click', () => {
+    burger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
+
+// ── LANGUAGE SWITCH ──
+let currentLang = 'de';
+function setLang(lang) {
+  currentLang = lang;
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.lang === lang);
+  });
+  document.querySelectorAll('.lang-content').forEach(el => {
+    el.classList.toggle('active', el.dataset.lang === lang);
+  });
+  document.querySelectorAll('.lang-inline').forEach(el => {
+    el.classList.toggle('active', el.dataset.lang === lang);
+  });
+  updateCounterDisplay();
+}
+// Both desktop and mobile lang buttons use the same handler
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => setLang(btn.dataset.lang));
+});
+// ── DOWNLOAD COUNTER ──
+// localStorage: counts clicks in THIS browser only.
+// For real global counts (all visitors), options:
+//   A) GoatCounter (goatcounter.com) — free, privacy-friendly, 1 script line
+//   B) Simple PHP counter on your server (2 lines, .txt file)
+//   C) Firebase Realtime DB (free tier)
+const COUNTER_KEYS = ['dlsDE', 'dlsEN', 'dlsES'];
+
+function getCount(key) {
+  return parseInt(localStorage.getItem(key) || '0', 10);
+}
+function incrementCount(key) {
+  const n = getCount(key) + 1;
+  localStorage.setItem(key, n);
+  return n;
+}
+function updateCounterDisplay() {
+  let total = 0;
+  COUNTER_KEYS.forEach(key => {
+    const n = getCount(key);
+    total += n;
+    const el = document.getElementById(key + '-label');
+    if (el) {
+      const sfx = { de: '× geklickt', en: '× clicked', es: '× clic' };
+      el.textContent = n > 0 ? `${n.toLocaleString('de-DE')} ${sfx[currentLang]||'×'}` : '—';
+    }
+  });
+  const totalEl = document.getElementById('totalCount');
+  if (totalEl) totalEl.textContent = total.toLocaleString('de-DE');
+
+  const note = document.getElementById('counterNote');
+  if (note) {
+    const tx = {
+      de: '(gezählt in diesem Browser)',
+      en: '(counted in this browser)',
+      es: '(contado en este navegador)'
+    };
+    note.textContent = tx[currentLang] || tx.de;
+  }
+}
+
+document.querySelectorAll('.dl-btn[data-key]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const key = btn.dataset.key;
+    if (key) { incrementCount(key); setTimeout(updateCounterDisplay, 80); }
+  });
+});
+
+updateCounterDisplay();
+
+// ── FADE IN ON SCROLL ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// ── CONTACT FORM (Formspree AJAX) ──
+const form = document.getElementById('contactForm');
+const success = document.getElementById('formSuccess');
+if (form) {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.style.display = 'none';
+        success.style.display = 'block';
+      } else {
+        alert('Fehler beim Senden. Bitte versuche es erneut.');
+      }
+    } catch {
+      alert('Netzwerkfehler. Bitte versuche es erneut.');
+    }
+  });
+}
+</script>
+
+</body>
+</html>

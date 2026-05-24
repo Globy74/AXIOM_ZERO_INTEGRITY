@@ -1,0 +1,68 @@
+[Wed Apr 01 12:38:17 UTC 2026][INFO] [Action] EE NewBook
+[Wed Apr 01 12:38:52 UTC 2026][INFO] [Action] E AutoChapterGroupAction - 0
+[Wed Apr 01 12:40:05 UTC 2026][INFO] [Action] E RemoveSectionBreak - 70,0
+[Wed Apr 01 12:40:20 UTC 2026][INFO] [Action] E AddTextContainer - (c,91,2),0,0,0
+[Wed Apr 01 12:40:35 UTC 2026][INFO] [Action] U AddTextContainer
+[Wed Apr 01 12:40:36 UTC 2026][INFO] [Action] U RemoveSectionBreak
+[Wed Apr 01 12:40:37 UTC 2026][INFO] [Action] U AutoChapterGroupAction
+[Wed Apr 01 12:40:56 UTC 2026][INFO] [Action] E ItemChanged - -1,240473
+[Wed Apr 01 12:41:43 UTC 2026][INFO] [Action] E MergeContainer - 143,1
+[Wed Apr 01 12:41:44 UTC 2026][INFO] [Action] E DeleteContent - (c,142,2),B
+[Wed Apr 01 12:41:47 UTC 2026][INFO] [Action] U DeleteContent
+[Wed Apr 01 12:41:52 UTC 2026][INFO] [Action] E MergeContainer - 119,1
+[Wed Apr 01 12:42:03 UTC 2026][INFO] [Action] E SplitContainer - 143
+[Wed Apr 01 12:42:22 UTC 2026][INFO] [Action] E MergeContainer - 282,1
+[Wed Apr 01 12:42:24 UTC 2026][INFO] [Action] E SplitContainer - 282
+[Wed Apr 01 12:42:27 UTC 2026][INFO] [Action] U SplitContainer
+[Wed Apr 01 12:42:29 UTC 2026][INFO] [Action] U MergeContainer
+[Wed Apr 01 12:42:35 UTC 2026][INFO] [Action] E MergeContainer - 91,1
+[Wed Apr 01 12:42:40 UTC 2026][INFO] [Action] U MergeContainer
+[Wed Apr 01 12:43:03 UTC 2026][INFO] [Action] E AddTextContainer - (c,2122,1),1,0,0
+[Wed Apr 01 12:43:03 UTC 2026][INFO] [Action] E AddTextContainer - (c,2123,1),1,0,0
+[Wed Apr 01 12:43:03 UTC 2026][INFO] [Action] E AddTextContainer - (c,2124,1),1,0,0
+[Wed Apr 01 12:43:04 UTC 2026][INFO] [Action] E AddTextContainer - (c,2125,1),1,0,0
+[Wed Apr 01 12:43:04 UTC 2026][INFO] [Action] E AddTextContainer - (c,2126,1),1,0,0
+[Wed Apr 01 12:43:04 UTC 2026][INFO] [Action] E AddTextContainer - (c,2127,1),1,0,0
+[Wed Apr 01 12:43:04 UTC 2026][INFO] [Action] E AddTextContainer - (c,2128,1),1,0,0
+[Wed Apr 01 12:43:05 UTC 2026][INFO] [Action] E AddTextContainer - (c,2129,1),1,0,0
+[Wed Apr 01 12:43:17 UTC 2026][INFO] [Action] E MergeContainer - 7479,1
+[Wed Apr 01 12:43:21 UTC 2026][INFO] [Action] U MergeContainer
+[Wed Apr 01 12:43:36 UTC 2026][INFO] [Action] E SaveBook - Save
+[Wed Apr 01 12:43:38 UTC 2026][INFO] [Action] EFail SaveBook - 4
+[Wed Apr 01 12:45:00 UTC 2026][INFO] [Action] E AddTextContainer - (c,91,1),1,0,0
+[Wed Apr 01 12:45:06 UTC 2026][INFO] [Action] E AddTextContainer - (c,283,1),1,0,0
+[Wed Apr 01 12:45:07 UTC 2026][INFO] [Action] E AddTextContainer - (c,284,1),1,0,0
+[Wed Apr 01 12:45:07 UTC 2026][INFO] [Action] E AddTextContainer - (c,285,1),1,0,0
+[Wed Apr 01 12:45:16 UTC 2026][INFO] [Action] E AddTextContainer - (c,286,1),1,0,0
+[Wed Apr 01 12:45:28 UTC 2026][INFO] [Action] E AddTextContainer - (c,2133,1),1,0,0
+[Wed Apr 01 12:45:29 UTC 2026][INFO] [Action] E AddTextContainer - (c,2134,1),1,0,0
+[Wed Apr 01 12:45:31 UTC 2026][INFO] [Action] E AddTextContainer - (c,2135,1),1,0,0
+[Wed Apr 01 12:45:43 UTC 2026][INFO] [Action] E MergeContainer - 7487,1
+[Wed Apr 01 12:45:46 UTC 2026][INFO] [Action] U MergeContainer
+[Wed Apr 01 12:45:58 UTC 2026][INFO] [Action] E SaveBook - SaveAs
+[Wed Apr 01 12:46:25 UTC 2026][INFO] [Action] E SaveBook - Save
+[Wed Apr 01 12:46:27 UTC 2026][INFO] Logger Terminated
+[Wed Apr 01 12:52:12 UTC 2026][INFO] [Action] EE OpenBook
+[Wed Apr 01 12:52:30 UTC 2026][INFO] [Action] E PreviewBook - 1
+[Wed Apr 01 12:53:16 UTC 2026][INFO] [Action] E MergeContainer - 7487,1
+[Wed Apr 01 12:53:18 UTC 2026][INFO] [Action] E SplitContainer - 7487
+[Wed Apr 01 12:53:22 UTC 2026][INFO] [Action] E AddTextContainer - (c,7487,1),1,0,0
+[Wed Apr 01 12:53:23 UTC 2026][INFO] [Action] E AddTextContainer - (c,7488,1),1,0,0
+[Wed Apr 01 12:53:23 UTC 2026][INFO] [Action] E AddTextContainer - (c,7489,1),1,0,0
+[Wed Apr 01 12:53:24 UTC 2026][INFO] [Action] E AddTextContainer - (c,7490,1),1,0,0
+[Wed Apr 01 12:53:24 UTC 2026][INFO] [Action] E AddTextContainer - (c,7491,1),1,0,0
+[Wed Apr 01 12:53:27 UTC 2026][INFO] [Action] E AddTextContainer - (c,7492,1),1,0,0
+[Wed Apr 01 12:53:30 UTC 2026][INFO] [Action] U AddTextContainer
+[Wed Apr 01 12:53:30 UTC 2026][INFO] [Action] U AddTextContainer
+[Wed Apr 01 12:53:31 UTC 2026][INFO] [Action] U AddTextContainer
+[Wed Apr 01 12:53:31 UTC 2026][INFO] [Action] U AddTextContainer
+[Wed Apr 01 12:53:32 UTC 2026][INFO] [Action] U AddTextContainer
+[Wed Apr 01 12:53:32 UTC 2026][INFO] [Action] U AddTextContainer
+[Wed Apr 01 12:53:33 UTC 2026][INFO] [Action] U SplitContainer
+[Wed Apr 01 12:53:34 UTC 2026][INFO] [Action] U MergeContainer
+[Wed Apr 01 12:53:42 UTC 2026][INFO] [Action] E PreviewBook - 7487
+[Wed Apr 01 12:55:36 UTC 2026][INFO] [Action] E AutoChapterGroupAction - 0
+[Wed Apr 01 12:57:35 UTC 2026][INFO] [Action] E PreviewBook - 5244
+[Wed Apr 01 12:59:20 UTC 2026][INFO] [Action] E ItemChanged - -1,7491
+[Wed Apr 01 13:00:45 UTC 2026][INFO] [Action] E UpdateStyle - (r,7491,7499),11:Bookerly,serif:4,(r,7491,7499),F
+[Wed Apr 01 13:01:30 UTC 2026][INFO] Logger Terminated

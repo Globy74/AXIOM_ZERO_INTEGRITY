@@ -6,7 +6,7 @@
 
 [axiom-zero.com](https://axiom-zero.com)
 
-![AXIOM-ZERO](https://axiom-zero.com/preview.jpg)
+![AXIOM-ZERO](preview.jpg)
 
 ---
 
